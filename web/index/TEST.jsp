@@ -14,16 +14,20 @@
     response.setCharacterEncoding("UTF-8");
     // 编码，解决中文乱码
     // 设置 name 和 url cookie
-    Cookie name = new Cookie("name", request.getParameter("usn"));
-    Cookie url = new Cookie("password", request.getParameter("psw1"));
-    out.print(name);
-    // 设置cookie过期时间为24小时。
-    name.setMaxAge(60*60*24);
-    url.setMaxAge(60*60*24);
-
-    // 在响应头部添加cookie
-    response.addCookie( name );
-    response.addCookie( url );
+    String name = request.getParameter("usn");
+    String password = request.getParameter("psw1");
+    session.setAttribute("uname",name);//建立session
+    session.setAttribute("upwd",password);
+    //获得sessionID，并将session在控制台输出
+    out.println("sessionID"+session.getId());
+    out.print((session.getMaxInactiveInterval())/60);
+    //设置session有效时间
+    //session.setMaxInactiveInterval(10);
+    //这里不用创建Cookie，服务端内部会自己创建JSessionID
+    Cookie cookie1=new Cookie("uname",name);
+    Cookie cookie2=new Cookie("upwd",password);
+    response.addCookie(cookie1);
+    response.addCookie(cookie2);
 %>
 <html>
 <head>
@@ -35,13 +39,14 @@
 
 <ul>
     <li><p><b>名:</b>
-        <%= request.getParameter("name")%>
+        <%= request.getParameter("usn")%>
     </p></li>
     <li><p><b>密码:</b>
-        <%= request.getParameter("url")%>
+        <%= request.getParameter("psw1")%>
     </p></li>
 </ul>
 </body>
 </html>
 
 
+//https://www.cnblogs.com/ym77/p/11323742.html
