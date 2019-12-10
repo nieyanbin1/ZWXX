@@ -29,13 +29,13 @@ public class LoginServlet extends HttpServlet {
         Statement statement = DatabaseBean.getStatement(con);
         String name = request.getParameter("usn");
         String password = request.getParameter("psw1");
+        out.print(password);
+        out.print(name);
         String sql = "select name from user where name= '"+name+"'" ;
         ResultSet r = DatabaseBean.getResultSet(statement,sql);
-
-
         try {
             if(r.next()){
-                    r=statement.executeQuery("select name,password from user where name='" + name + "' and userland = '" + password + "' ");
+                    r=statement.executeQuery("select name,password from user where name='" + name + "' and password = '" + password + "' ");
                 }
                 if(r.next()) {
                     out.print(name + "登录成功");
