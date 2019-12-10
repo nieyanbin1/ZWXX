@@ -12,10 +12,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width-device-width,initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="sie-edge" />
-  <link rel="stylesheet" type="text/css" href="../css/style1.css">
+  <link rel="stylesheet" type="text/css" href="css/style1.css">
   <title>座无虚席·登录注册</title>
-  <link rel="stylesheet" href="../css/icons-reference/xxx/iconfont.css">
-  <link rel="shortcut icon" type="image/x-icon" href="../view/images/favicon.ico">
+  <link rel="stylesheet" href="css/icons-reference/xxx/iconfont.css">
+  <link rel="shortcut icon" type="image/x-icon" href="view/images/favicon.ico">
   <!--图标库-->
   <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
   <style type="text/css">
@@ -30,7 +30,7 @@
 
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="/rg" method="post">
+    <form action="${pageContext.request.contextPath}/rg" method="post">
       <h1>欢迎注册</h1>
       <label>
         <input type="text" name="usn" placeholder="姓名" id="name" required>
@@ -52,7 +52,7 @@
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form action="/lg" method="post">
+    <form action="${pageContext.request.contextPath}/lg" method="post">
       <h1>欢迎回来</h1>
       <label>
         <input type="text" name="usn" placeholder="用户名" required>
