@@ -29,13 +29,12 @@ public class LoginServlet extends HttpServlet {
         Statement statement = DatabaseBean.getStatement(con);
         String name = request.getParameter("usn");
         String password = request.getParameter("psw1");
-        out.print(password);
-        out.print(name);
-        String sql = "select name from user where name= '"+name+"'" ;
+        String sql = "select name from subscriber where name= '"+name+"'" ;
         ResultSet r = DatabaseBean.getResultSet(statement,sql);
+        out.println(name);
         try {
             if(r.next()){
-                    r=statement.executeQuery("select name,password from user where name='" + name + "' and password = '" + password + "' ");
+                    r=statement.executeQuery("select name,password from subscriber where name='" + name + "' and password = '" + password + "' ");
                 }
                 if(r.next()) {
                     out.print(name + "登录成功");
@@ -44,7 +43,7 @@ public class LoginServlet extends HttpServlet {
                     out.print("密码输入错误！！！");
                 }
                 if(name.equals("1")){
-                    out.print("<script>alert('管理员登录成功!');window.location.href='backstage.jsp'</script>");
+                    out.print("<script>alert('管理员登录成功!');window.location.href='../back/backstage.jsp'</script>");
                 }
             else {
                 out.print("<font color=red>" + name + "</font>用户不存在！！！<br>" + "请点击<a href=\"post.jsp\">注册</a>");

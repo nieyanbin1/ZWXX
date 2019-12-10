@@ -30,7 +30,7 @@ public class RegisterServlet extends HttpServlet {
         String mail = request.getParameter("em");
         String phonenumber = request.getParameter("pn");
         String type = request.getParameter("tp");
-        sql = "insert into user(name,password,mail,phonenumber,type)values(?,?,?,?,?)";
+        sql = "insert into subscriber(name,password,mail,phonenumber,type)values(?,?,?,?,?)";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         out.println(statement);
         try {
