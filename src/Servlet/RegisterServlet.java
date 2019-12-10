@@ -32,7 +32,6 @@ public class RegisterServlet extends HttpServlet {
         String type = request.getParameter("tp");
         sql = "insert into subscriber(name,password,mail,phonenumber,type)values(?,?,?,?,?)";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
-        out.println(statement);
         try {
             statement.setString(2, password);
             statement.setString(1, name);

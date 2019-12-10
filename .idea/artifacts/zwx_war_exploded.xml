@@ -19,6 +19,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" />
           <element id="library" level="project" name="mysql-connector-java-8.0.15" />
           <element id="library" level="project" name="websocket-api" />
+          <element id="library" level="project" name="Hibernate 5.4.9-5.4.9" />
         </element>
       </element>
     </root>
