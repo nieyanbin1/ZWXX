@@ -15,6 +15,7 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../view/images/favicon.ico">
 </head>
 <style type="text/css">
     body {

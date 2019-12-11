@@ -1,13 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: WJX
-  Date: 2019/11/19
-  Time: 8:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh CN">
+<%
+    Object name = session.getAttribute("uname");
+    if(name==null){
+        out.print("<script>alert('你尚未登录');window.location.href='login.html'</script>");
+    }else{}
+%>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -151,6 +150,7 @@
     </style>
     <link rel="stylesheet" href="../css/demo-center.css">
 </head>
+
 <body>
 <!-- start page-wrapper -->
 <div class="page-wrapper">

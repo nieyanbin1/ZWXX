@@ -32,7 +32,7 @@
 <body>
     <fieldset>
         <legend>管理员</legend>
-        <form class="control-group" id="userInfoForm" method="post" action="Servlet.RegisterServlet" onSubmit="return isValid(this);">
+        <form class="control-group" id="userInfoForm" method="post" action="/rg" onSubmit="return isValid(this);">
             <div class="control-group">
                 <label class="control-label" for="username2" >用户名</label>
                 <div class="controls">

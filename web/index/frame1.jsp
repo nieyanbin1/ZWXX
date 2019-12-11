@@ -19,7 +19,11 @@
 <style type="text/css">
  body{
      background-color: rgba(220,220,220,0.7);
+     width: 900px;
  }
+    td{
+        width: 150px;
+    }
 
 </style>
 <body>
@@ -29,7 +33,7 @@
     response.setCharacterEncoding("UTF-8");
     Connection con = DatabaseBean.getConn();//out.print(n);out.print(ps);
     try {
-        String sql = "select * from account;";
+        String sql = "select * from subscriber;";
         assert con != null;
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         ResultSet r = statement.executeQuery(sql);
@@ -41,6 +45,8 @@
             <th>用户名</th>
             <th>密码</th>
             <th>邮箱</th>
+            <th>电话号码</th>
+            <th>用户类型</th>
             <th>操作</th>
         </tr>
 
@@ -61,8 +67,10 @@
             <td><%=r.getString(1)%></td>
             <td><%=r.getString(2) %></td>
             <td><%=r.getString(3) %></td>
+            <td><%=r.getString(4) %></td>
+            <td><%=r.getString(5) %></td>
             <td>
-                <a href="Servlet.DeleteServlet?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>">删除</a>
+                <a href="/dl?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>">删除</a>
                 <a href="frame4.jsp?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>&email=<%=r.getString(3)%>">修改</a>
             </td>
         </tr>

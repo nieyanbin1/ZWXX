@@ -19,15 +19,28 @@
     session.setAttribute("uname",name);//建立session
     session.setAttribute("upwd",password);
     //获得sessionID，并将session在控制台输出
-    out.println("sessionID"+session.getId());
-    out.print((session.getMaxInactiveInterval())/60);
+    out.println("sessionID"+session.getId()+"\n");
+    out.println(session.getAttribute("uname")+"\n");
+    out.println("有效时间："+(session.getMaxInactiveInterval())/60+"min");
     //设置session有效时间
     //session.setMaxInactiveInterval(10);
     //这里不用创建Cookie，服务端内部会自己创建JSessionID
-    Cookie cookie1=new Cookie("uname",name);
-    Cookie cookie2=new Cookie("upwd",password);
-    response.addCookie(cookie1);
-    response.addCookie(cookie2);
+    Cookie cookie = null;
+    Cookie[] cookies = null;
+    // 获取 cookies 的数据,是一个数组
+    cookies = request.getCookies();
+    if( cookies != null ){
+        out.println("<h2> 查找 Cookie 名与值</h2>");
+        for (Cookie value : cookies) {
+            cookie = value;
+            out.print("参数名 : " + cookie.getName());
+            out.print("<br>");
+            out.print("参数值: " + URLDecoder.decode(cookie.getValue(), "utf-8") + " <br>");
+            out.print("------------------------------------<br>");
+        }
+    }else{
+        out.println("<h2>没有发现 Cookie</h2>");
+    }
 %>
 <html>
 <head>
@@ -35,18 +48,15 @@
 </head>
 <body>
 
-<h1>设置 Cookie</h1>
-
-<ul>
-    <li><p><b>名:</b>
-        <%= request.getParameter("usn")%>
-    </p></li>
-    <li><p><b>密码:</b>
-        <%= request.getParameter("psw1")%>
-    </p></li>
-</ul>
 </body>
 </html>
 
 
-//https://www.cnblogs.com/ym77/p/11323742.html
+<!--
+https://www.cnblogs.com/ym77/p/11323742.html
+
+Cookie cookie1=new Cookie("uname",name);
+Cookie cookie2=new Cookie("upwd",password);
+response.addCookie(cookie1);
+response.addCookie(cookie2);
+-->
