@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "RegisterServlet")
+@WebServlet(name = "RegisterServlet",urlPatterns = "/md")
 public class ModifyServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
@@ -28,7 +28,7 @@ public class ModifyServlet extends HttpServlet {
         String na = (String) request.getSession().getAttribute("nn");
         String ema = request.getParameter("em");
         String sql;
-        sql = "update account set email =?, userland =? where name =?";
+        sql = "update subscriber set email =?, userland =? where name =?";
         //out.println(u);out.println(na);out.println(ema);
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {

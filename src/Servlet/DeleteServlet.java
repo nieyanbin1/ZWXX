@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "DeleteServlet")
+@WebServlet(name = "DeleteServlet",urlPatterns = "/dl")
 public class DeleteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             doGet(request, response);
@@ -27,7 +27,7 @@ public class DeleteServlet extends HttpServlet {
         String n = request.getParameter("name");
         String ps = request.getParameter("pwd");
         //out.println(n);out.println(ps);
-        String sql = "delete from account where name=? and userland = ? ";
+        String sql = "delete from subscriber where name=? and password = ? ";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {
             statement.setString(1, n);
