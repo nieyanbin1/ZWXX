@@ -184,7 +184,7 @@
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="yonghu1.html" class="theme-btn">我的</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="yonghu.jsp" class="theme-btn">我的</a> </div>
                 </div>
             </div>
             <!-- end of container -->

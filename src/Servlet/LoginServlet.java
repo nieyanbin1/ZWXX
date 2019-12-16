@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
                         out.print("<script>alert('登录成功!');window.location.href='index/yonghu1.jsp'</script>");
                 } else {
                     out.print("密码输入错误！！！");
-                    }
+                }
             }else{
                 out.print("<font color=red>" + name + "</font>用户不存在！！！<br>" + "请点击<a href=\"post.jsp\">注册</a>");
             }

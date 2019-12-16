@@ -39,38 +39,17 @@
     <![endif]-->
 
     <style type="text/css">
-        main{
+        main {
             width: 100%;
             height: 1000px;
             padding-left: 120px;
-            background-color: rgba(0,0,0,0.05);
+            background-color: rgba(0, 0, 0, 0.05);
         }
-        .box1{
-            float: left;
-            width: 18%;
-            height: 90%;
-            margin: 20px;
-            padding: 20px;
-        }
-        .box2{
-            inner:empty;
-            float: left;
-            width: 70%;
-            height: 90%;
-            margin: 20px;
-            background-color: white;
-        }
-        .fuck{
-            font-size: 25px;
-            line-height: 120px;
-        }
-        .fuck:hover{
-            background-color: rgba(0,0,0,0.1);
-            width: 150px;
-            border-radius: 5px;
-        }
-        .shit{
-            line-height: 30px;
+        #wtf{
+            height: 500px;
+            width: 100%;
+            border: 1px solid #e4b9b9;
+
         }
         .shit a{
             margin: 50px;
@@ -175,7 +154,7 @@
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="login.html" class="theme-btn">登录·注册</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="yonghu1.html" class="theme-btn">我的</a> </div>
                 </div>
             </div>
             <!-- end of container -->
@@ -183,11 +162,9 @@
     </header>
     <!-- end of header -->
 
+    <div id="wtf">
 
-    <!-- 页面内容写这里-->
-    <!-- 页面内容写这里-->
-    <!-- 页面内容写这里-->
-
+    </div>
 
     <!-- start site-footer -->
     <footer class="site-footer">

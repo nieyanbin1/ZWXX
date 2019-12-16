@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "RegisterServlet",urlPatterns="/rg")
+@WebServlet(name = "RegisterServlet‘",urlPatterns="/rg")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
@@ -32,9 +32,9 @@ public class RegisterServlet extends HttpServlet {
         String mail = request.getParameter("em");
         String phonenumber = request.getParameter("pn");
         String type = request.getParameter("tp");
-        session.setAttribute("uname",name);//建立session
-        session.setAttribute("upwd",password);
-        sql = "insert into subscriber(name,password,mail,phonenumber,type)values(?,?,?,?,?)";
+        //session.setAttribute("uname",name);//建立session
+        //session.setAttribute("upwd",password);
+        sql = "insert into subscriber(name,password,mail,phonenumber,usrtype)values(?,?,?,?,?)";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {
             statement.setString(2, password);
@@ -59,3 +59,4 @@ public class RegisterServlet extends HttpServlet {
         }
     }
 }
+
