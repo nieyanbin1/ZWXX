@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: WJX
+  Date: 2019/12/16
+  Time: 9:14
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,33 +14,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="irstheme">
     <title>座无虚席</title>
-    <link href="../css/themify-icons.css" rel="stylesheet">
-    <link href="../css/flaticon.css" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/animate.css" rel="stylesheet">
-    <link href="../css/owl.carousel.css" rel="stylesheet">
-    <link href="../css/owl.theme.css" rel="stylesheet">
-    <link href="../css/slick.css" rel="stylesheet">
-    <link href="../css/slick-theme.css" rel="stylesheet">
-    <link href="../css/swiper.min.css" rel="stylesheet">
-    <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <link href="../css/owl.transitions.css" rel="stylesheet">
-    <link href="../css/jquery.fancybox.css" rel="stylesheet">
-    <link href="../css/theme-default.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/icons-reference/xxx/iconfont.css">
+    <link href="../web/css/themify-icons.css" rel="stylesheet">
+    <link href="../web/css/flaticon.css" rel="stylesheet">
+    <link href="../web/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../web/css/animate.css" rel="stylesheet">
+    <link href="../web/css/owl.carousel.css" rel="stylesheet">
+    <link href="../web/css/owl.theme.css" rel="stylesheet">
+    <link href="../web/css/slick.css" rel="stylesheet">
+    <link href="../web/css/slick-theme.css" rel="stylesheet">
+    <link href="../web/css/swiper.min.css" rel="stylesheet">
+    <link href="../web/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../web/css/owl.transitions.css" rel="stylesheet">
+    <link href="../web/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../web/css/theme-default.css" rel="stylesheet">
+    <link href="../web/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../web/css/icons-reference/xxx/iconfont.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/style2.css" >
-    <link href="../css/js/jquery.min.js" rel="stylesheet">
-    <link href="../css/js/bootstrap.min.js" rel="stylesheet">
-    <link href="../css/js/jquery-plugin-collection.js" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../web/images/favicon.ico">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        main{
+            width: 100%;
+            height: 1000px;
+            padding-left: 120px;
+            background-color: rgba(0,0,0,0.05);
+        }
+        .box1{
+            float: left;
+            width: 18%;
+            height: 90%;
+            margin: 20px;
+            padding: 20px;
+        }
+        .box2{
+            inner:empty;
+            float: left;
+            width: 70%;
+            height: 90%;
+            margin: 20px;
+            background-color: white;
+        }
+        .fuck{
+            font-size: 25px;
+            line-height: 120px;
+        }
+        .fuck:hover{
+            background-color: rgba(0,0,0,0.1);
+            width: 150px;
+            border-radius: 5px;
+        }
+        .shit{
+            line-height: 30px;
+        }
+        .shit a{
+            margin: 50px;
+        }
+        .shit a:hover{
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .iconfont{
+            font-size: 25px;
+        }
+    </style>
 
 </head>
 
@@ -86,102 +136,60 @@
                 </div>
             </div>
             <!-- end container -->
-
         </div>
-
-
         <nav class="navigation navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="open-btn"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt></a> </div>
+                    <a class="navbar-brand" href="index.html"><img src="../web/images/logo.png" alt></a> </div>
                 <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                     <button class="close-navbar"><i class="ti-close"></i></button>
                     <ul class="nav navbar-nav">
-                        <li class="menu-item-has-children"> <a href="#">我的信息</a>
+                        <li class="active"><a href="index.html">首页</a></li>
+                        <li><a href="../web/index/about-us.html">关于我们</a></li>
+                        <li class="menu-item-has-children"> <a href="#">页</a>
                             <ul class="sub-menu">
-                                <li><a href="about-us.html">l历史订单</a></li>
-                                <li><a href="faq.html">我的预定</a></li>
-                                <li><a href="testimonials.html">电话</a></li>
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">联系我们</a></li>
+                                <li><a href="../web/index/about-us.html">About Us</a></li>
+                                <li><a href="../web/index/faq.html">FAQ</a></li>
+                                <li><a href="../web/index/testimonials.html">Testimonials</a></li>
+                                <li><a href="../web/index/team.html">Team</a></li>
+                                <li><a href="../web/index/gallery.html">Gallery</a></li>
+                                <li><a href="../web/index/404.html">404</a></li>
                             </ul>
                         </li>
+                        <li class="menu-item-has-children"> <a href="#">服务</a>
+                            <ul class="sub-menu">
+                                <li><a href="../web/index/services.html">服务</a></li>
+                                <li><a href="../web/index/service-details.html">服务细节</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"> <a href="#">微博</a>
+                            <ul class="sub-menu">
+                                <li><a href="../web/index/blog.html">Blog default</a></li>
+                                <li><a href="../web/index/blog-single.html">Blog single</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../web/index/contact-us.html">联系我们</a></li>
                     </ul>
                 </div>
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="shangjia1.html" class="theme-btn">个人中心</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="../web/index/login.html" class="theme-btn">登录·注册</a> </div>
                 </div>
             </div>
             <!-- end of container -->
         </nav>
     </header>
+    <!-- end of header -->
 
-    <main>
-        <!--
-        <script type="text/javascript">
-            function getTime() {
-                var myDate = new Date();
-                var h = myDate.getHours();
-                var m = myDate.getMinutes();
-                var myTime = "";
-                if (h < 10)
-                    myTime += "0";
-                myTime += h + ":";
 
-                if (m < 10)
-                    myTime += "0";
-                myTime += m;
+    <!-- 页面内容写这里-->
+    <!-- 页面内容写这里-->
+    <!-- 页面内容写这里-->
 
-                if (myTime == "23:59") {
-                    alert("距离签到还有1分钟");
-                } else if (myTime == "00:00") {
-                    alert("签到已经开始");
-                } else if (myTime == "00:01") {
-                    alert("签到理论上已经结束，是否前去查看？");
-                }
-            }
 
-            setInterval("getTime()", 10000);//隔10秒调用一次方法，因为你没要求到秒
-        </script>
-        -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9">
-                    <form>
-                    <h2 style="text-align: center">订单详情</h2>
-                    <p>商家:</p><input type="text" name="enterprise" style="border: none" readonly="readonly">
-                    <p>商家地址:</p><input type="text" name="enterpriseaddress" style="border: none" readonly="readonly">
-                    <p>排队号:</p><input name="id" style="border: none" type="text" readonly="readonly">
-                    <p>当前排队人数:</p><input type="text" name="idnum" style="border: none" readonly="readonly">
-                    <p>订单时间:</p><input type="text" name="time" style="border: none" readonly="readonly">
-                    <p>订单流水号:</p><input type="text" name="orderid" style="border: none" readonly="readonly">
-                    </form>
-                </div>
-                <div class="col-lg-3">
-                    <h3 style="text-align: center">是否取消订单</h3>
-                    <button type="submit" id="queren">是</button>
-                    <script type="text/javascript">
-                        window.onload=function()
-                        {
-                            var bt=document.getElementById("queren");
-                            bt.onclick=function()
-                            {
-                                if(confirm("确定要取消订单吗，取消订单将扣去一定信誉积分"))
-                                {
-                                    alert("我要取消！");
-                                }
-                            }
-                        }
-                    </script>
-
-                </div>
-            </div>
-        </div>
-    </main>
-
+    <!-- start site-footer -->
     <footer class="site-footer">
         <div class="upper-footer">
             <div class="container">
