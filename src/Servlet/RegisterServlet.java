@@ -7,18 +7,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-@WebServlet(name = "RegisterServlet",urlPatterns="/rg")
+@WebServlet(name = "RegisterServlet‘",urlPatterns="/rg")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session=request.getSession();
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("UTF-8");
@@ -30,7 +32,9 @@ public class RegisterServlet extends HttpServlet {
         String mail = request.getParameter("em");
         String phonenumber = request.getParameter("pn");
         String type = request.getParameter("tp");
-        sql = "insert into subscriber(name,password,mail,phonenumber,type)values(?,?,?,?,?)";
+        //session.setAttribute("uname",name);//建立session
+        //session.setAttribute("upwd",password);
+        sql = "insert into subscriber(name,password,mail,phonenumber,usrtype)values(?,?,?,?,?)";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {
             statement.setString(2, password);
@@ -55,3 +59,4 @@ public class RegisterServlet extends HttpServlet {
         }
     }
 }
+

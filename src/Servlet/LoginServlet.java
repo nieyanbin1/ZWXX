@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -21,6 +22,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session=request.getSession();
         response.setContentType("text/html;charset=utf-8");
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("UTF-8");
@@ -29,6 +31,8 @@ public class LoginServlet extends HttpServlet {
         Statement statement = DatabaseBean.getStatement(con);
         String name = request.getParameter("usn");
         String password = request.getParameter("psw1");
+        session.setAttribute("uname",name);//建立session
+        session.setAttribute("upwd",password);
         String sql = "select name from subscriber where name= '"+name+"'" ;
         ResultSet r = DatabaseBean.getResultSet(statement,sql);
         try {
@@ -38,10 +42,10 @@ public class LoginServlet extends HttpServlet {
                     if (name.equals("1")) {
                         out.print("<script>alert('管理员登录成功!');window.location.href='index/backstage.jsp'</script>");
                     } else
-                        out.print("<script>alert('登录成功!');window.location.href='index/index.jsp'</script>");
+                        out.print("<script>alert('登录成功!');window.location.href='index/yonghu1.jsp'</script>");
                 } else {
                     out.print("密码输入错误！！！");
-                    }
+                }
             }else{
                 out.print("<font color=red>" + name + "</font>用户不存在！！！<br>" + "请点击<a href=\"post.jsp\">注册</a>");
             }

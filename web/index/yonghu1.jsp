@@ -1,6 +1,20 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: WJX
+  Date: 2019/12/16
+  Time: 9:09
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <%
+        Object name = session.getAttribute("uname");
+        if(name==null){
+            out.print("<script>alert('你尚未登录');window.location.href='login.html'</script>");
+        }else{}
+    %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,19 +35,64 @@
     <link href="../css/theme-default.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/icons-reference/xxx/iconfont.css">
+    <link rel="stylesheet" href="../css/icons-reference/xx/iconfont.css">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/style2.css" >
-    <link href="../css/js/jquery.min.js" rel="stylesheet">
-    <link href="../css/js/bootstrap.min.js" rel="stylesheet">
-    <link href="../css/js/jquery-plugin-collection.js" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <style type="text/css">
+        main{
+            width: 100%;
+            height: 1000px;
+            padding-left: 120px;
+            background-color: rgba(0,0,0,0.05);
+        }
+        .box1{
+            float: left;
+            width: 12%;
+            height: 90%;
+            margin-top: 30px;
+        }
+        .box2{
+            float: left;
+            width: 70%;
+            height: 90%;
+            margin: 20px;
+            background-color: white;
+        }
+        .fuck{
+            font-size: 25px;
+            line-height: 60px;
+            height: 60px;
+        }
+        .fuck:hover{
+            background-color: rgba(0,0,0,0.1);
+            width: 150px;
+            border-radius: 5px;
+            height: 60px;
+        }
+        .shit{
+            line-height: 30px;
+        }
+        .shit a{
+            margin: 50px;
+        }
+        .shit a:hover{
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .iconfont{
+            font-size: 25px;
+        }
+        #xy{
+            border: 0;
+            background-color: rgba(0,0,0,0.05);
+        }
+    </style>
 </head>
 
 <body>
@@ -86,102 +145,82 @@
                 </div>
             </div>
             <!-- end container -->
-
         </div>
-
-
         <nav class="navigation navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="open-btn"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt></a> </div>
+                    <a class="navbar-brand" href="../index.jsp"><img src="../images/logo.png" alt></a> </div>
                 <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                     <button class="close-navbar"><i class="ti-close"></i></button>
                     <ul class="nav navbar-nav">
-                        <li class="menu-item-has-children"> <a href="#">我的信息</a>
+                        <li class="active"><a href="../index.jsp">首页</a></li>
+                        <li><a href="about-us.html">关于我们</a></li>
+                        <li class="menu-item-has-children"> <a href="#">页</a>
                             <ul class="sub-menu">
-                                <li><a href="about-us.html">l历史订单</a></li>
-                                <li><a href="faq.html">我的预定</a></li>
-                                <li><a href="testimonials.html">电话</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">联系我们</a></li>
                             </ul>
                         </li>
+                        <li class="menu-item-has-children"> <a href="#">服务</a>
+                            <ul class="sub-menu">
+                                <li><a href="services.html">服务</a></li>
+                                <li><a href="service-details.html">服务细节</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"> <a href="#">微博</a>
+                            <ul class="sub-menu">
+                                <li><a href="blog.html">Blog default</a></li>
+                                <li><a href="blog-single.html">Blog single</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact-us.html">联系我们</a></li>
                     </ul>
                 </div>
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="shangjia1.html" class="theme-btn">个人中心</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="yonghu.jsp" class="theme-btn">我的</a> </div>
                 </div>
             </div>
             <!-- end of container -->
         </nav>
     </header>
+    <!-- end of header -->
+
 
     <main>
-        <!--
-        <script type="text/javascript">
-            function getTime() {
-                var myDate = new Date();
-                var h = myDate.getHours();
-                var m = myDate.getMinutes();
-                var myTime = "";
-                if (h < 10)
-                    myTime += "0";
-                myTime += h + ":";
+        <div class="box1">
+            <ul>
+                <li class="fuck">
+                    <a href="yonghu1.1.html" target="xy"><span class="icon iconfont icon-shouye"></span>&nbsp;&nbsp;个人中心</a>
+                </li>
+                <li>
+                    <h3><span class="iconfont icon-daifukuandingdan"></span>&nbsp;&nbsp;我的订单</h3>
+                </li>
+                <li class="shit"><a href="yonghu1.2.html" target="xy">近三个月</a></li>
+                <li>
+                    <h3><span class="iconfont icon-wo"></span>&nbsp;&nbsp;我的资料</h3>
+                </li>
+                <li class="shit"><a href="yonghu1.3.html" target="xy">个人资料</a></li>
+                <li class="shit"><a href="#" target="xy">账户信息</a></li>
 
-                if (m < 10)
-                    myTime += "0";
-                myTime += m;
-
-                if (myTime == "23:59") {
-                    alert("距离签到还有1分钟");
-                } else if (myTime == "00:00") {
-                    alert("签到已经开始");
-                } else if (myTime == "00:01") {
-                    alert("签到理论上已经结束，是否前去查看？");
-                }
-            }
-
-            setInterval("getTime()", 10000);//隔10秒调用一次方法，因为你没要求到秒
-        </script>
-        -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9">
-                    <form>
-                    <h2 style="text-align: center">订单详情</h2>
-                    <p>商家:</p><input type="text" name="enterprise" style="border: none" readonly="readonly">
-                    <p>商家地址:</p><input type="text" name="enterpriseaddress" style="border: none" readonly="readonly">
-                    <p>排队号:</p><input name="id" style="border: none" type="text" readonly="readonly">
-                    <p>当前排队人数:</p><input type="text" name="idnum" style="border: none" readonly="readonly">
-                    <p>订单时间:</p><input type="text" name="time" style="border: none" readonly="readonly">
-                    <p>订单流水号:</p><input type="text" name="orderid" style="border: none" readonly="readonly">
-                    </form>
-                </div>
-                <div class="col-lg-3">
-                    <h3 style="text-align: center">是否取消订单</h3>
-                    <button type="submit" id="queren">是</button>
-                    <script type="text/javascript">
-                        window.onload=function()
-                        {
-                            var bt=document.getElementById("queren");
-                            bt.onclick=function()
-                            {
-                                if(confirm("确定要取消订单吗，取消订单将扣去一定信誉积分"))
-                                {
-                                    alert("我要取消！");
-                                }
-                            }
-                        }
-                    </script>
-
-                </div>
-            </div>
+                <li class="fuck">
+                    <a href="#" target="xy"><span class="icon iconfont icon-shoucang"></span>&nbsp;&nbsp;我的收藏</a>
+                </li>
+            </ul>
+        </div>
+        <div class="box2">
+            <iframe id="xy" name="xy" src="yonghu1.1.html" style="overflow:visible;" width="100%" height="100%; float:left"></iframe>
         </div>
     </main>
 
+
+    <!-- start site-footer -->
     <footer class="site-footer">
         <div class="upper-footer">
             <div class="container">
@@ -235,7 +274,9 @@
                             <p>订阅邮箱以获取我们的最新动向</p>
                             <form>
                                 <div class="input-1">
-                                    <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    <label>
+                                        <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    </label>
                                 </div>
                                 <div class="submit clearfix">
                                     <button type="submit"><i class="ti-email"></i></button>
