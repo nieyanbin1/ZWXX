@@ -79,12 +79,7 @@
                     <div class="col col-sm-3">
                         <div class="social">
                             <div class="social-links">
-                                <ul>
-                                    <li><a href="#" class="social"><span class="iconfont icon-qq"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-weixin"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-zhifubao"></span></a></li>
-                                    <li></li>
-                                </ul>
+                                <label>您好，<%=session.getAttribute("uname")%></>
                             </div>
                         </div>
                     </div>

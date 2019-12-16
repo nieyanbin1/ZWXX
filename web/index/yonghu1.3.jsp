@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: WJX
+  Date: 2019/12/16
+  Time: 11:42
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +32,13 @@
     </style>
 </head>
 <body>
-    <h3>个人资料</h3>
-    <hr>
-    <span>头像:</span>
-    <a href="#"><img src="../images/testimonials1.png" alt="头像"/></a>
-    <br><br><br>
-    <span>用户名：  xxx</span>
-    <br><br><br>
-    <span>联系方式：  xxx</span>
+<h3>个人资料</h3>
+<hr>
+<span>头像:</span>
+<a href="#"><img src="../images/testimonials1.png" alt="头像"/></a>
+<br><br><br>
+<span>用户名：  <%=session.getAttribute("uname")%></span>
+<br><br><br>
+<span>联系方式：  xxx</span>
 </body>
 </html>

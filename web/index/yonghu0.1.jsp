@@ -49,7 +49,13 @@
             height: 500px;
             width: 100%;
             border: 1px solid #e4b9b9;
-
+            padding: 100px;
+        }
+        #ff{
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            width: 150px;
         }
         .shit a{
             margin: 50px;
@@ -60,6 +66,15 @@
         }
         .iconfont{
             font-size: 25px;
+        }
+        td{
+            height: 36px;
+            text-align: center;
+            line-height: 56px;
+            width: 90px;
+        }
+        select{
+            width: 80px;
         }
     </style>
 
@@ -103,12 +118,7 @@
                     <div class="col col-sm-3">
                         <div class="social">
                             <div class="social-links">
-                                <ul>
-                                    <li><a href="#" class="social"><span class="iconfont icon-qq"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-weixin"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-zhifubao"></span></a></li>
-                                    <li></li>
-                                </ul>
+                                <label>您好，<%=session.getAttribute("uname")%></>
                             </div>
                         </div>
                     </div>
@@ -163,7 +173,98 @@
     <!-- end of header -->
 
     <div id="wtf">
-
+        <table>
+            <tr>
+                <td><h4>排队：</h4></td>
+                <td>
+                    <label>
+                        <select>
+                            <option value="0">人数</option>
+                            <option value="2">两人座</option>
+                            <option value="4">四人座</option>
+                            <option value="8">八人座</option>
+                            <option value="12">十二人座</option>
+                        </select>
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <select>
+                            <option value="0">包间</option>
+                            <option value="1">大厅</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td><h4>时间：  </h4></td>
+                <td>
+                    <label>
+                        <select>
+                            <option value="0">月</option>
+                            <option value=1>1月</option>
+                            <option value=2>2月</option>
+                            <option value=3>3月</option>
+                            <option value=4>4月</option>
+                            <option value=5>5月</option>
+                            <option value=6>6月</option>
+                            <option value=7>7月</option>
+                            <option value=8>8月</option>
+                            <option value=9>9月</option>
+                            <option value=10>10月</option>
+                            <option value=11>11月</option>
+                            <option value=12>12月</option>
+                        </select>
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <select>
+                            <option value="0">日</option>
+                            <option value=1>1</option>
+                            <option value=2>2</option>
+                            <option value=3>3</option>
+                            <option value=4>4</option>
+                            <option value=5>5</option>
+                            <option value=6>6</option>
+                            <option value=7>7</option>
+                            <option value=8>8</option>
+                            <option value=9>9</option>
+                            <option value=10>10</option>
+                            <option value=11>11</option>
+                            <option value=12>12</option>
+                            <option value=13>13</option>
+                            <option value=14>14</option>
+                            <option value=15>15</option>
+                            <option value=16>16</option>
+                            <option value=17>17</option>
+                            <option value=18>18</option>
+                            <option value=19>19</option>
+                            <option value=20>20</option>
+                            <option value=21>21</option>
+                            <option value=22>22</option>
+                            <option value=23>23</option>
+                            <option value=24>24</option>
+                            <option value=25>25</option>
+                            <option value=26>26</option>
+                            <option value=27>27</option>
+                            <option value=28>28</option>
+                            <option value=29>29</option>
+                            <option value=30>30</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" id="ff">
+                </td>
+            </tr>
+        </table>
     </div>
 
     <!-- start site-footer -->

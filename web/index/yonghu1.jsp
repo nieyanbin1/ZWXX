@@ -133,12 +133,7 @@
                     <div class="col col-sm-3">
                         <div class="social">
                             <div class="social-links">
-                                <ul>
-                                    <li><a href="#" class="social"><span class="iconfont icon-qq"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-weixin"></span></a></li>
-                                    <li><a href="#" class="social"><span class="iconfont icon-zhifubao"></span></a></li>
-                                    <li></li>
-                                </ul>
+                                <label>您好，<%=session.getAttribute("uname")%></>
                             </div>
                         </div>
                     </div>
@@ -197,7 +192,7 @@
         <div class="box1">
             <ul>
                 <li class="fuck">
-                    <a href="yonghu1.1.html" target="xy"><span class="icon iconfont icon-shouye"></span>&nbsp;&nbsp;个人中心</a>
+                    <a href="yonghu1.1.jsp" target="xy"><span class="icon iconfont icon-shouye"></span>&nbsp;&nbsp;个人中心</a>
                 </li>
                 <li>
                     <h3><span class="iconfont icon-daifukuandingdan"></span>&nbsp;&nbsp;我的订单</h3>
@@ -206,7 +201,7 @@
                 <li>
                     <h3><span class="iconfont icon-wo"></span>&nbsp;&nbsp;我的资料</h3>
                 </li>
-                <li class="shit"><a href="yonghu1.3.html" target="xy">个人资料</a></li>
+                <li class="shit"><a href="yonghu1.3.jsp" target="xy">个人资料</a></li>
                 <li class="shit"><a href="#" target="xy">账户信息</a></li>
 
                 <li class="fuck">
@@ -215,7 +210,7 @@
             </ul>
         </div>
         <div class="box2">
-            <iframe id="xy" name="xy" src="yonghu1.1.html" style="overflow:visible;" width="100%" height="100%; float:left"></iframe>
+            <iframe id="xy" name="xy" src="yonghu1.1.jsp" style="overflow:visible;" width="100%" height="100%; float:left"></iframe>
         </div>
     </main>
 
