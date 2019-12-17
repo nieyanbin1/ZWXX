@@ -50,7 +50,7 @@
 <div class="box">
         <fieldset>
             <legend>修改为</legend>
-            <form class="control-group" id="userInfoForm" method="post" action="/md" onSubmit="return isValid(this);">
+            <form class="control-group" id="userInfoForm" method="post" action="${pageContext.request.contextPath}/md" onSubmit="return isValid(this);">
                 <div class="control-group">
                     <label class="control-label" for="username2" >用户名</label>
                     <div class="controls">

@@ -6,7 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+        <!--此为网站主页-->
+        <!--此为网站主页-->
+        <!--此为网站主页-->
 <!DOCTYPE html>
+
 <html lang="zh CN">
 <head>
     <meta charset="utf-8">
