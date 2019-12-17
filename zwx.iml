@@ -66,5 +66,7 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.49" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.4.9-5.4.9" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.15" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

@@ -26,7 +26,7 @@ public class DeleteServlet extends HttpServlet {
         Connection con = DatabaseBean.getConn();
         String n = request.getParameter("name");
         String ps = request.getParameter("pwd");
-        //out.println(n);out.println(ps);
+        out.println(n);out.println(ps);
         String sql = "delete from subscriber where name=? and password = ? ";
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {
@@ -45,7 +45,7 @@ public class DeleteServlet extends HttpServlet {
             DatabaseBean.close();
         }catch(Exception e)
         {
-            e.printStackTrace();
+            //out.print(e.toString());
         }
     }
 }

@@ -7,7 +7,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="zh CN">
+<%
+    Object name = session.getAttribute("uname");
+    if(name==null){
+        out.print("<script>alert('你尚未登录');window.location.href='login.html'</script>");
+    }else{}
+%>
 <head>
     <title>B</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,40 +30,50 @@
         background: #fff url(../view/images/backgroud.png) no-repeat fixed 50% 50%;
         width: 100%;
     }
+
     .main {
         position: absolute;
-        top: 386px;left: 440px;
+        top: 386px;
+        left: 440px;
         width: 100%;
         height: 600px;
         margin: -300px 0 0 -215px;
         border: 1px solid #fff;
-        border-radius: 0; overflow: hidden;
+        border-radius: 0;
+        overflow: hidden;
         box-shadow: 0 1px 25px 5px #808080;
-        background-color: rgba(220,220,220,0.7);
+        background-color: rgba(220, 220, 220, 0.7);
     }
-    .main2{
+
+    .main2 {
         position: absolute;
-        top: 380px;left: 215px;
+        top: 380px;
+        left: 215px;
         width: 220px;
         height: 606px;
         margin: -300px 0 0 -215px;
         border: 1px solid #fff;
         border-top: none;
-        border-radius: 0; overflow: hidden;
+        border-radius: 0;
+        overflow: hidden;
         box-shadow: 0 1px 25px 5px #808080;
-        background-color: rgba(0,00,00,0.5);
+        background-color: rgba(0, 00, 00, 0.5);
     }
-    th{
+
+    th {
         text-align: center;
         vertical-align: middle;
     }
-    tr{
+
+    tr {
         text-align: center;
         vertical-align: middle;
     }
-    td{
+
+    td {
         vertical-align: middle;
     }
+
     h1 {
         color: white;
     }
@@ -67,7 +83,7 @@
 <div class="head">
     <h1>后台管理</h1>
 </div>
-<hr style="color: white" >
+<hr style="color: white">
 
 <div class="main2">
     <div class="container">
@@ -84,7 +100,8 @@
     </div>
 </div>
 <div class="main">
-    <iframe id="mf" name="mf" src="frame3.jsp" style="overflow:visible;" width="100%" height="100%; float:left"></iframe>
+    <iframe id="mf" name="mf" src="frame3.jsp" style="overflow:visible;" width="100%"
+            height="100%; float:left"></iframe>
 </div>
 </body>
 </html>

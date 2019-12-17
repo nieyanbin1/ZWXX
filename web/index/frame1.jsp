@@ -70,7 +70,7 @@
             <td><%=r.getString(4) %></td>
             <td><%=r.getString(5) %></td>
             <td>
-                <a href="/dl?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>">删除</a>
+                <a href="${pageContext.request.contextPath}/dl?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>">删除</a>
                 <a href="frame4.jsp?name=<%=r.getString(1)%>&pwd=<%=r.getString(2)%>&email=<%=r.getString(3)%>">修改</a>
             </td>
         </tr>
