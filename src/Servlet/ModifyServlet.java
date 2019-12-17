@@ -28,7 +28,7 @@ public class ModifyServlet extends HttpServlet {
         String na = (String) request.getSession().getAttribute("nn");
         String ema = request.getParameter("em");
         String sql;
-        sql = "update subscriber set email =?, userland =? where name =?";
+        sql = "update subscriber set mail =?, password =? where name =?";
         //out.println(u);out.println(na);out.println(ema);
         PreparedStatement statement = DatabaseBean.getPreparedStatement(sql,con);
         try {
