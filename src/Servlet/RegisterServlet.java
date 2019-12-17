@@ -30,7 +30,7 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("psw1");
         String name = request.getParameter("usn");
         String mail = request.getParameter("em");
-        String phonenumber = request.getParameter("pn");
+        String ph = request.getParameter("pn");
         String type = request.getParameter("tp");
         //session.setAttribute("uname",name);//建立session
         //session.setAttribute("upwd",password);
@@ -40,7 +40,7 @@ public class RegisterServlet extends HttpServlet {
             statement.setString(2, password);
             statement.setString(1, name);
             statement.setString(3, mail);
-            statement.setString(4, phonenumber);
+            statement.setString(4, ph);
             statement.setString(5, type);
             int n = statement.executeUpdate();
             if (n == 1) {
@@ -55,7 +55,7 @@ public class RegisterServlet extends HttpServlet {
             DatabaseBean.close();
         }catch(Exception e)
         {
-            e.printStackTrace();
+            //out.print(e.toString());
         }
     }
 }

@@ -39,7 +39,7 @@
         <input type="email" name="em" placeholder="邮箱" id="email" required>
       </label>
       <label>
-        <input type="text" name="pn" placeholder="手机号" id="phonenumber" required>
+        <input type="text" name="pn" placeholder="手机号" id="phonenumber" required onkeyup="value=value.replace(/[^\d]/g,'')">
       </label>
       <label>
         <input type="password" name="psw1" placeholder="密码" id="password" required>
@@ -60,13 +60,10 @@
       <label>
         <input type="password" name="psw1" placeholder="密码" required>
       </label>
-      <div class="social-container"> <a href="#" class="social">
-        <span class="iconfont icon-weixin"></span>
-      </a> <a href="#" class="social">
-        <span class="iconfont icon-zhifubao"></span>
-      </a> <a href="#" class="social">
-        <span class="iconfont icon-qq"></span>
-      </a> </div>
+      <label>
+        <input name="tp" type="radio" checked="checked" value="1"/>商家  |
+        用户<input name="tp" type="radio" checked="checked" value="2"/>
+      </label>
       <button type="submit">登录</button>
     </form>
   </div>
