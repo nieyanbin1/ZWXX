@@ -7,7 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="zh CN">
+<html lang="zh-CN">
 <%
     Object name = session.getAttribute("uname");
     if(name==null){

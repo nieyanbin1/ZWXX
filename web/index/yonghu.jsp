@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="zh CN">
+<html lang="zh-CN">
 <%
     Object name = session.getAttribute("uname");
     if(name==null){

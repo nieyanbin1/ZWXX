@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!--后台管理员修改子页面-->
-<html>
+<html lang="zh-CN">
 <head>
     <title>Title</title>
     <meta name="description" content="Bootstrap Version2.0 horizontal form browser status example from w3cschool.cc.">
