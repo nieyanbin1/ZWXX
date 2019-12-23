@@ -11,6 +11,20 @@
     <title>shangjia</title>
 </head>
 <body>
+<form method="post" action="/test">
+    <input type="submit" value="ceshi">
 
+</form>
+<form method="post" action="/paidui">
+    座位类型：<input type="text" name="seatsize">
+
+    <input type="submit" value="排队测试">
+</form>
+
+<form method="post" action="/deletorderid">
+        订单流水号：<input type="text" name="orderid">
+        <input type="submit" value="删除订单测试">
+
+</form>
 </body>
 </html>

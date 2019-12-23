@@ -51,7 +51,7 @@
         <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
           <root url="file://D:/apache-tomcat-8.5.47/lib" />
@@ -61,9 +61,9 @@
         <jarDirectory url="file://D:/apache-tomcat-8.5.47/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.47" level="application_server_libraries" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="websocket-api" level="project" />
-    <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.49" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.47" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket-api" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.49" level="application_server_libraries" />
     <orderEntry type="library" name="Hibernate 5.4.9-5.4.9" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.15" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
@@ -71,5 +71,30 @@
     <orderEntry type="library" name="ionicons" level="application" />
     <orderEntry type="library" name="respond" level="application" />
     <orderEntry type="library" name="html5shiv" level="application" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://D:/apache-tomcat-9.0.26" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/apache-tomcat-9.0.26/webapps/docs/appdev/sample/src" />
+          <root url="file://D:/apache-tomcat-9.0.26/webapps/examples/WEB-INF/classes" />
+          <root url="file://D:/apache-tomcat-9.0.26/webapps/examples/WEB-INF/jsp/applet" />
+          <root url="file://D:/apache-tomcat-9.0.26/webapps/examples/jsp/plugin/applet" />
+          <root url="file://D:/apache-tomcat-9.0.26/work/Catalina/localhost/ROOT" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
