@@ -12,7 +12,7 @@
     <%
         Object name = session.getAttribute("uname");
         if(name==null){
-            out.print("<script>alert('你尚未登录');window.location.href='login.html'</script>");
+            out.print("<script>alert('你尚未登录');window.location.href='../index.jsp'</script>");
         }else{}
     %>
     <meta charset="utf-8">
@@ -179,7 +179,7 @@
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="yonghu.jsp" class="theme-btn">我的</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="yonghu.jsp" class="theme-btn">开始排队</a> </div>
                 </div>
             </div>
             <!-- end of container -->

@@ -6,11 +6,287 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<%
+    Object name = session.getAttribute("uname");
+    if(name==null){
+        out.print("<script>alert('你尚未登录');window.location.href='../index.jsp'</script>");
+    }else{}
+%>
 <html lang="zh-CN">
 <head>
-    <title>shangjia</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="irstheme">
+    <title>座无虚席</title>
+    <link href="../css/themify-icons.css" rel="stylesheet">
+    <link href="../css/flaticon.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/owl.theme.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/slick-theme.css" rel="stylesheet">
+    <link href="../css/swiper.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/owl.transitions.css" rel="stylesheet">
+    <link href="../css/jquery.fancybox.css" rel="stylesheet">
+    <link href="../css/theme-default.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/icons-reference/xxx/iconfont.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/style2.css" >
+    <link href="../css/js/jquery.min.js" rel="stylesheet">
+    <link href="../css/js/bootstrap.min.js" rel="stylesheet">
+    <link href="../css/js/jquery-plugin-collection.js" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
 
+<!-- start page-wrapper -->
+<div class="page-wrapper">
+
+    <!-- start preloader -->
+    <div class="preloader">
+        <div class="sb-cube-grid">
+            <div class="sb-cube sb-cube1"></div>
+            <div class="sb-cube sb-cube2"></div>
+            <div class="sb-cube sb-cube3"></div>
+            <div class="sb-cube sb-cube4"></div>
+            <div class="sb-cube sb-cube5"></div>
+            <div class="sb-cube sb-cube6"></div>
+            <div class="sb-cube sb-cube7"></div>
+            <div class="sb-cube sb-cube8"></div>
+            <div class="sb-cube sb-cube9"></div>
+        </div>
+    </div>
+    <!-- end preloader -->
+
+    <!-- Start header -->
+    <header id="header" class="site-header header-style-3">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-sm-9">
+                        <div class="contact-info">
+                            <ul>
+                                <li><i class="ti-email"></i> 1@wjxwjx.com</li>
+                                <li><i class="ti-mobile"></i> +88888888</li>
+                                <li><i class="ti-location-pin"></i>Nanchang JiangXi China</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-sm-3">
+                        <div class="social">
+                            <div class="social-links">
+                                <ul>
+                                    <li><a href="#" class="social"><span class="iconfont icon-qq"></span></a></li>
+                                    <li><a href="#" class="social"><span class="iconfont icon-weixin"></span></a></li>
+                                    <li><a href="#" class="social"><span class="iconfont icon-zhifubao"></span></a></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+
+        </div>
+
+
+        <nav class="navigation navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="open-btn"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="index.jsp"><img src="../images/logo.png" alt></a> </div>
+                <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
+                    <button class="close-navbar"><i class="ti-close"></i></button>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="shangjia.html">我的店铺</a></li>
+                        <li class="menu-item-has-children"> <a href="#">我的信息</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">商家简介</a></li>
+                                <li><a href="../../Test/faq.html">地址</a></li>
+                                <li><a href="testimonials.html">电话</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="contact-us.html">联系我们</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of nav-collapse -->
+
+                <div class="cart-contact">
+                    <div class="contact-btn hidden-xs"> <a href="shangjia1.html" class="theme-btn">个人中心</a> </div>
+                </div>
+            </div>
+            <!-- end of container -->
+        </nav>
+    </header>
+    <div><tr>
+        <td height="35" bgcolor="#ffffff">
+            <div >
+                <span >   欢迎您，(12137138244) ***商家</span>
+            </div>
+        </td>
+    </tr></div>
+
+
+    <div><table id="DataTable" class="text-center table table-bordered"><tbody><tr><td>桌位号</td><td>规格</td><td>状态</td></tr>
+    <tr><td class="col-md-2">1#</td><td class="col-md-6">2人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
+        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                        <option value="">空闲</option>
+                        <option value="">占用</option>
+                        <option value="">即将空闲</option>
+                    </select></div>
+            </div></div></form>
+        </section>
+    </td></tr>
+    <tr><td class="col-md-2">2#</td><td class="col-md-6">4人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
+        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                        <option value="">空闲</option>
+                        <option value="">占用</option>
+                        <option value="">即将空闲</option>
+                    </select></div>
+            </div></div></form>
+        </section>
+    </td></tr>
+    <tr><td class="col-md-2">3#</td><td class="col-md-6">6人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
+        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                        <option value="">空闲</option>
+                        <option value="">占用</option>
+                        <option value="">即将空闲</option>
+                    </select></div>
+            </div></div></form>
+        </section>
+    </td></tr>
+    <tr><td class="col-md-2">4#</td><td class="col-md-6">8人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
+        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                        <option value="">空闲</option>
+                        <option value="">占用</option>
+                        <option value="">即将空闲</option>
+                    </select></div>
+            </div></div></form>
+        </section>
+    </td></tr></tbody>
+    </table></div>
+    <footer class="site-footer">
+        <div class="upper-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-3 col-md-3 col-sm-6">
+                        <div class="widget about-widget">
+                            <div class="logo widget-title">
+                                <h3>联系我们</h3>
+                            </div>
+                            <p>了解我们的最新动态，与我们沟通交流</p>
+                            <ul class="footer-social-menu list-inline">
+                                <li><a href="#" class="social"><span class="iconfont icon-weibo"></span></a></li>
+                                <li><a href="#" class="social"><span class="iconfont icon-qq"></span></a></li>
+                                <li><a href="#" class="social"><span class="iconfont icon-weixin"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-6">
+                        <div class="widget link-widget">
+                            <div class="widget-title">
+                                <h3>快速导航</h3>
+                            </div>
+                            <ul>
+                                <li><a href="javascript:void(0)">关于我们</a></li>
+                                <li><a href="javascript:void(0)">服务情况</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="javascript:void(0)">客户评价</a></li>
+                                <li><a href="javascript:void(0)">常见问题</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-6">
+                        <div class="widget contact-widget service-link-widget">
+                            <div class="widget-title">
+                                <h3>工作详情</h3>
+                            </div>
+                            <p>中国 · 南昌</p>
+                            <ul>
+                                <li>电话: 88888888 </li>
+                                <li>邮箱: <a href="mailto:test@sbtechnosoft.com">1@wjxwjx.com</a></li>
+                                <li>工作时间: 9 am- 6 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col-lg-3 col-md-3 col-sm-6">
+                        <div class="widget newsletter-widget">
+                            <div class="widget-title">
+                                <h3>订阅</h3>
+                            </div>
+                            <p>订阅邮箱以获取我们的最新动向</p>
+                            <form>
+                                <div class="input-1">
+                                    <input type="email" class="form-control" placeholder="Email Address *" required>
+                                </div>
+                                <div class="submit clearfix">
+                                    <button type="submit"><i class="ti-email"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end container -->
+        </div>
+        <div class="lower-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="separator"></div>
+                    <div class="col col-xs-12">
+                        <p class="copyright">Copyright &copy; 2019 <span>zwxx</span>. All rights reserved.</p>
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="#" class="social"><span class="iconfont icon-weibo"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end site-footer -->
+
+</div>
+<!-- end of page-wrapper -->
+
+<!-- All JavaScript files
+    ================================================== -->
+<script src="../css/js/jquery.min.js"></script>
+<script src="../css/js/bootstrap.min.js"></script>
+
+<!-- Plugins for this template -->
+<script src="../css/js/jquery-plugin-collection.js"></script>
+
+<!-- Custom script for this template -->
+<script src="../css/js/custom.js"></script>
 </body>
 </html>

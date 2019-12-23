@@ -11,7 +11,7 @@
 <%
     Object name = session.getAttribute("uname");
     if(name==null){
-        out.print("<script>alert('你尚未登录');window.location.href='login.html'</script>");
+        out.print("<script>alert('你尚未登录');window.location.href='../index.jsp'</script>");
     }else{}
 %>
 <head>

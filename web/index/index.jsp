@@ -82,7 +82,12 @@
                     <div class="col col-sm-3">
                         <div class="social">
                             <div class="social-links">
-                                <label>您好，<%=session.getAttribute("uname")%></>
+                                <%
+                                    String x = (String) session.getAttribute("uname");
+                                    if (x==null)
+                                        x = "请登录";
+                                %>
+                                <label>您好，<a href="yonghu1.jsp"><%=x%></a></label>
                             </div>
                         </div>
                     </div>
@@ -128,7 +133,7 @@
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="login.html" class="theme-btn">登录·注册</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="../index.jsp" class="theme-btn">登录·注册</a> </div>
                 </div>
             </div>
             <!-- end of container -->
@@ -152,7 +157,7 @@
                                 <p>save your time</p>
                             </div>
                             <div class="clearfix"></div>
-                            <div data-swiper-parallax="500" class="slide-btns"> <a href="#" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
+                            <div data-swiper-parallax="500" class="slide-btns"> <a href="shangjia.jsp" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
                         </div>
                     </div>
                     <!-- end slide-inner -->
@@ -172,7 +177,7 @@
                                 <p>save your time</p>
                             </div>
                             <div class="clearfix"></div>
-                            <div data-swiper-parallax="500" class="slide-btns"> <a href="#" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
+                            <div data-swiper-parallax="500" class="slide-btns"> <a href="shangjia.jsp" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
                         </div>
                     </div>
                     <!-- end slide-inner -->
@@ -192,7 +197,7 @@
                                 <p>save your time</p>
                             </div>
                             <div class="clearfix"></div>
-                            <div data-swiper-parallax="500" class="slide-btns"> <a href="#" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
+                            <div data-swiper-parallax="500" class="slide-btns"> <a href="shangjia.jsp" class="theme-btn">探索</a> <a href="yonghu.jsp" class="theme-btn one">开始</a> </div>
                         </div>
                     </div>
                     <!-- end slide-inner -->
