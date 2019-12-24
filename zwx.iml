@@ -64,11 +64,11 @@
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.47" level="application_server_libraries" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="websocket-api" level="project" />
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 8.5.49" level="application_server_libraries" />
-    <orderEntry type="library" name="Hibernate 5.4.9-5.4.9" level="project" />
+    <orderEntry type="library" exported="" name="Hibernate 5.4.9-5.4.9" level="project" />
     <orderEntry type="library" name="mysql-connector-java-8.0.15" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="ionicons" level="application" />
+    <orderEntry type="library" exported="" name="bootstrap" level="application" />
+    <orderEntry type="library" exported="" name="jquery" level="application" />
+    <orderEntry type="library" exported="" name="ionicons" level="application" />
     <orderEntry type="library" name="respond" level="application" />
     <orderEntry type="library" name="html5shiv" level="application" />
   </component>

@@ -1,3 +1,12 @@
+<%@page import="D.Seat"%>
+<%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
 <%--
   Created by IntelliJ IDEA.
   User: WJX
@@ -5,15 +14,15 @@
   Time: 8:29
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<%
-    Object name = session.getAttribute("uname");
-    if(name==null){
-        out.print("<script>alert('你尚未登录');window.location.href='../index.jsp'</script>");
-    }else{}
-%>
-<html lang="zh-CN">
+<html lang="en">
+<script type="text/javascript">
+    window.onload=function(){
+        $.ajax({
+            url:"/aa",
+     type:"post",
+     });
+             }        </script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,7 +59,7 @@
 
 </head>
 
-<body>
+<body onload="a()">
 
 <!-- start page-wrapper -->
 <div class="page-wrapper">
@@ -116,7 +125,7 @@
                         <li class="menu-item-has-children"> <a href="#">我的信息</a>
                             <ul class="sub-menu">
                                 <li><a href="about-us.html">商家简介</a></li>
-                                <li><a href="../../Test/faq.html">地址</a></li>
+                                <li><a href="faq.html">地址</a></li>
                                 <li><a href="testimonials.html">电话</a></li>
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="contact-us.html">联系我们</a></li>
@@ -136,61 +145,43 @@
     <div><tr>
         <td height="35" bgcolor="#ffffff">
             <div >
-                <span >   欢迎您，(12137138244) ***商家</span>
+                <span >   欢迎您，1商家</span>
             </div>
         </td>
     </tr></div>
 
-
+    <%
+        HttpSession session1=request.getSession(false);
+        ArrayList<Seat> list= (ArrayList<Seat>)session1.getAttribute("list");
+    %>
     <div><table id="DataTable" class="text-center table table-bordered"><tbody><tr><td>桌位号</td><td>规格</td><td>状态</td></tr>
-    <tr><td class="col-md-2">1#</td><td class="col-md-6">2人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
-        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
+    <% for(int d=0;d<4;d++){%>
+    <form class="form-horizontal" role="form" action="/1" method="post">
+        <tr><td class="col-md-2"><section> <div class="col-xs-6">
             <div class="input-group">
                 <div class="input-group-btn">
-                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
-                        <option value="">空闲</option>
-                        <option value="">占用</option>
-                        <option value="">即将空闲</option>
+                    <select  name="seatno" class="form-control" style="width:100px;padding:3px 10px;background:white  no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                        <option value="<%=list.get(d).getSeatno()%>" selected="selected"><%=list.get(d).getSeatno()%>#</option>
                     </select></div>
-            </div></div></form>
-        </section>
-    </td></tr>
-    <tr><td class="col-md-2">2#</td><td class="col-md-6">4人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
-        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
-            <div class="input-group">
-                <div class="input-group-btn">
-                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
-                        <option value="">空闲</option>
-                        <option value="">占用</option>
-                        <option value="">即将空闲</option>
-                    </select></div>
-            </div></div></form>
-        </section>
-    </td></tr>
-    <tr><td class="col-md-2">3#</td><td class="col-md-6">6人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
-        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
-            <div class="input-group">
-                <div class="input-group-btn">
-                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
-                        <option value="">空闲</option>
-                        <option value="">占用</option>
-                        <option value="">即将空闲</option>
-                    </select></div>
-            </div></div></form>
-        </section>
-    </td></tr>
-    <tr><td class="col-md-2">4#</td><td class="col-md-6">8人桌</td><td class="btn-group dropdown col-md-2" id="dropdown">
-        <section> <form class="form-horizontal" role="form"><div class="col-xs-6">
-            <div class="input-group">
-                <div class="input-group-btn">
-                    <select name="" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA url('{ $smarty.const.IMG_URL }triangle.svg') no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
-                        <option value="">空闲</option>
-                        <option value="">占用</option>
-                        <option value="">即将空闲</option>
-                    </select></div>
-            </div></div></form>
-        </section>
-    </td></tr></tbody>
+            </div></div>
+
+        </section></td>   <td class="col-md-6"><%=list.get(d).getSeatsize() %>人桌</td>
+            <td class="btn-group dropdown col-md-2">
+            <section> <div class="col-xs-6">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <select  name="status" class="form-control" style="width:100px;padding:3px 10px;border-top-left-radius: 5px;border-bottom-left-radius: 5px;background: #EAEAEA  no-repeat 90% 50%;background-size:13px 13px;appearance:none;-moz-appearance:none;-webkit-appearance:none;">
+                            <option value="<%=list.get(d).getSeatstatus()%>" selected="selected"><%=list.get(d).getSeatstatus()%></option>
+                            <option value="空闲">空闲</option>
+                            <option value="占用">占用</option>
+                            <option value="即将空闲">即将空闲</option>
+                        </select></div>
+                </div></div>
+
+            </section><button type="submit" value="Submit">确认</button>
+    </form>
+    <% }%>
+    </tbody>
     </table></div>
     <footer class="site-footer">
         <div class="upper-footer">
