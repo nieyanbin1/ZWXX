@@ -40,15 +40,15 @@
 
     <style type="text/css">
         main {
-            width: 100%;
-            height: 1000px;
-            padding-left: 120px;
+            width: 1920px;
+            height: 480px;
             background-color: rgba(0, 0, 0, 0.05);
         }
         #wtf{
-            height: 500px;
-            width: 100%;
-            border: 1px solid #e4b9b9;
+            height: 350px;
+            width: 32%;
+            position: absolute;
+            top: 200px;
             padding: 100px;
         }
         #ff{
@@ -164,14 +164,14 @@
                 <!-- end of nav-collapse -->
 
                 <div class="cart-contact">
-                    <div class="contact-btn hidden-xs"> <a href="yonghu1.html" class="theme-btn">我的</a> </div>
+                    <div class="contact-btn hidden-xs"> <a href="yonghu1.jsp" class="theme-btn">我的</a> </div>
                 </div>
             </div>
             <!-- end of container -->
         </nav>
     </header>
     <!-- end of header -->
-
+    <main>
     <div id="wtf">
         <table>
             <tr>
@@ -261,12 +261,12 @@
             <tr>
                 <td></td>
                 <td>
-                    <input type="submit" id="ff">
+                    <input type="submit" id="ff" value="提交">
                 </td>
             </tr>
         </table>
     </div>
-
+    </main>
     <!-- start site-footer -->
     <footer class="site-footer">
         <div class="upper-footer">

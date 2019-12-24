@@ -47,7 +47,7 @@ public class LoginServlet extends HttpServlet {
                             else
                                 out.print("<script>alert('登录成功!');window.location.href='index/shangjia.html'</script>");
                 } else {
-                    out.print("<script>alert('密码输入错误 或 用户类型选错');window.location.href='#'</script>");
+                    out.print("<script>alert('密码输入错误 或 用户类型选错');window.location.href='index.jsp'</script>");
                 }
             }else{
                 out.print("<font color=red>" + name + "</font>用户不存在！！！<br>" + "请点击<a href=\"post.jsp\">注册</a>");
