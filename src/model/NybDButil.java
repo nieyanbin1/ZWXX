@@ -3,7 +3,7 @@ import java.sql.*;
 public class NybDButil {
     public static Connection getConn() {
         Connection con = null;
-        String url = "jdbc:mysql://192.168.198.45:3306/zwxx?serverTimezone=GMT%2B8";
+        String url = "jdbc:mysql://104.168.198.45:3306/zwxx?serverTimezone=GMT%2B8";
         String un = "root";
         String pd = "Wjx980120!";
         try {
